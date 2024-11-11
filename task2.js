@@ -1,30 +1,9 @@
-let num1 = Number(prompt("Бірінші санды енгізіңіз: "));
-let num2 = Number(prompt("Екінші санды енгізіңіз: "));
-let num3 = Number(prompt("Үшінші санды енгізіңіз: "));
+let num1 = Number(prompt("Бірінші санды енгізіңіз:"));
+let num2 = Number(prompt("Екінші санды енгізіңіз:"));
+let num3 = Number(prompt("Үшінші санды енгізіңіз:"));
 
-if (num1 >= num2 && num1 >= num3 && num3 < num2) {
-    alert("Бірінші сан ең үлкені ал үшінші сан ең кішісі және үлкен санмен кіші саннның айырмасы: " + (num1 - num3))
-}
-
-else if (num1 >= num2 && num1 >= num3 && num2 < num3) {
-    alert("Бірінші сан ең үлкені ал екінші сан ең кішісі және үлкен санмен кіші саннның айырмасы: " + (num1 - num2))
-}
-
-else if (num2 >= num1 && num2 >= num3 && num3 < num1) {
-    alert("Екінші сан ең үлкені ал үшінші сан ең кішісі және үлкен санмен кіші саннның айырмасы: " + (num2 - num3))
-}
-
-else if (num2 >= num1 && num2 >= num3 && num1 < num3) {
-    alert("Екінші сан ең үлкені ал бірінші сан ең кішісі және үлкен санмен кіші саннның айырмасы: " + (num2 - num1))
-}
-
-else if (num3 >= num2 && num3 >= num1 && num1 < num2) {
-    alert("Үшінші сан ең үлкені ал бірінші сан ең кішісі және үлкен санмен кіші саннның айырмасы: " + (num3 - num1))
-}
-
-else if (num3 >= num2 && num3 >= num1 && num2 < num1) {
-    alert("Үшінші сан ең үлкені ал екінші сан ең кішісі және үлкен санмен кіші саннның айырмасы: " + (num3 - num2))
-}
-else {
-    alert("Дұрыс сан енгізіңіз")
-}
+let max = Math.max(num1, num2, num3);
+let min = Math.min(num1, num2, num3);
+let airmasy = '';
+airmasy = max - min;
+alert("Ең үлкен және ең кішкентай санның айырмасы: " + airmasy )
